@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+- Maintain best code practicies.
+- Clean comment on every change/update/creation in any file.
+- Use TODO lists for planning and updating curent tasks, make sure to mark done tasks, for example:
+Before been done - []Connect to DB
+After been done - [X]Connect to DB.
+- Do not ask questions that can be answered by previous prompt, ask when done.
+
+- Avoid extra explanations unless specificly asked to.
+- Test the code before output it and keep trying to make it work
