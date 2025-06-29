@@ -9,12 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "geist": "^1.4.2",
+    "lucide-react": "^0.518.0",
     "next": "15.3.4",
+    "next-auth": "^4.24.11",
     "react": "^19.1.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19",
