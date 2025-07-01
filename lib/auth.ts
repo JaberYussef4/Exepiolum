@@ -2,7 +2,64 @@ import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import bcrypt from 'bcrypt';
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// app/lib/auth.ts
+import { promises as fs } from 'fs';
+import path from 'path';
+
+const dbPath = path.join(process.cwd(), 'app/api/db.json');
+
+type User = {
+  id: number;
+  email: string;
+  password: string;
+};
+
+export async function getUserByEmail(email: string): Promise<User | undefined> {
+  const db = await fs.readFile(dbPath, 'utf-8');
+  const { users } = JSON.parse(db);
+  return users.find((user: User) => user.email === email);
+}
+
+export async function verifyPassword(
+  hashedPassword: string,
+  password: string
+
+	
+): 
+Promise<boolean> {
+  return await bcrypt.compare( password ,hashedPassword);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // A simple in-memory user store for demonstration
+
 const users: Record<string, { hashedPassword: string }> = {};
 
 // The NextAuthConfig type is causing a linter error, so we are letting

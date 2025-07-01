@@ -80,7 +80,20 @@
   line-height: 20px;
   font-weight: 500;
 }
+/* page.module.css */
+.loginButton {
+  padding: 10px 20px;
+  background: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
 
+.loginButton:hover {
+  background: #0061d5;
+}
 a.primary {
   background: var(--foreground);
   color: var(--background);
